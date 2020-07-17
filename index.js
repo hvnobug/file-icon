@@ -1194,7 +1194,7 @@ const fileIcon = {
                 (
                     this.fileIcons.icons.find(({fileExtensions, fileNames}) =>
                         // 先从 fileNames 开始匹配
-                        (fileNames && fileNames.find(fileName => fileName === fileName)) ||
+                        (fileNames && fileNames.find(fn => fn === fileName)) ||
                         (fileExtension && fileExtensions && fileExtensions.find(fe => fe === fileExtension))
                     )
                 )
