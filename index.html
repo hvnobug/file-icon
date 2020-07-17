@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        p {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+
+        .icon {
+            width: 2em;
+            height: 2em;
+            fill: currentColor;
+            margin-right: 1em;
+        }
+    </style>
+</head>
+<body>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="index.min.js"></script>
+<script type="text/javascript">
+    const files = [
+        {
+            name: '1.java',
+            isDirectory: false,
+        },
+        {
+            name: '2.js',
+            isDirectory: false,
+        },
+        {
+            name: '3.ts',
+            isDirectory: false,
+        },
+        {
+            name: '4.json',
+            isDirectory: false,
+        },
+        {
+            name: '5.md',
+            isDirectory: false,
+        },
+        {
+            name: '6.png',
+            isDirectory: false,
+        },
+        {
+            name: '7.yml',
+            isDirectory: false,
+        },
+        {
+            name: '8.properties',
+            isDirectory: false,
+        },
+        {
+            name: '9.py',
+            isDirectory: false,
+        },
+        {
+            name: '10.doc',
+            isDirectory: false,
+        },
+        {
+            name: '11.xls',
+            isDirectory: false,
+        },
+        {
+            name: '12.ppt',
+            isDirectory: false,
+        },
+        {
+            name: '13.txt',
+            isDirectory: false,
+        },
+        {
+            name: 'src',
+            isDirectory: true,
+        },
+        {
+            name: 'js',
+            isDirectory: true,
+        },
+        {
+            name: 'css',
+            isDirectory: true,
+        },
+        {
+            name: 'images',
+            isDirectory: true,
+        },
+        {
+            name: 'node_modules',
+            isDirectory: true,
+        },
+        {
+            name: 'libs',
+            isDirectory: true,
+        },
+    ]
+    $('body').html(files.reduce((pf, cf) => pf + `<p><embed id="embed" class="icon" src="icons/${fileIcon.getIconByFile(cf)}.svg" type="image/svg+xml"><span>${cf.name}</span></p>`, ''))
+</script>
+</body>
+</html>
